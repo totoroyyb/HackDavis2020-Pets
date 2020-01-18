@@ -17,6 +17,7 @@
 		C5231BD823D3B6200033C22A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C5231BD723D3B6200033C22A /* GoogleService-Info.plist */; };
 		C5231BD923D3BE140033C22A /* Pods_HackDavis2020_Pets.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8A07F7F60E87754D46045C5 /* Pods_HackDavis2020_Pets.framework */; };
 		C5231BDA23D3BE140033C22A /* Pods_HackDavis2020_Pets.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A8A07F7F60E87754D46045C5 /* Pods_HackDavis2020_Pets.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C5231BDF23D3C8A30033C22A /* ChatController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5231BDE23D3C8A30033C22A /* ChatController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -47,6 +48,7 @@
 		A8A07F7F60E87754D46045C5 /* Pods_HackDavis2020_Pets.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HackDavis2020_Pets.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF3FA741A9E32D3AB4535819 /* Pods-HackDavis2020-Pets.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackDavis2020-Pets.release.xcconfig"; path = "Target Support Files/Pods-HackDavis2020-Pets/Pods-HackDavis2020-Pets.release.xcconfig"; sourceTree = "<group>"; };
 		C5231BD723D3B6200033C22A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C5231BDE23D3C8A30033C22A /* ChatController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 				21ABB46D23D3980F00BDAA45 /* Info.plist */,
 				21ABB46023D3980B00BDAA45 /* HackDavis2020_Pets.xcdatamodeld */,
 				21ABB46723D3980F00BDAA45 /* Preview Content */,
+				C5231BDE23D3C8A30033C22A /* ChatController.swift */,
 			);
 			path = "HackDavis2020-Pets";
 			sourceTree = "<group>";
@@ -240,6 +243,7 @@
 				21ABB45D23D3980B00BDAA45 /* AppDelegate.swift in Sources */,
 				21ABB45F23D3980B00BDAA45 /* SceneDelegate.swift in Sources */,
 				21ABB46423D3980B00BDAA45 /* ContentView.swift in Sources */,
+				C5231BDF23D3C8A30033C22A /* ChatController.swift in Sources */,
 				21ABB46223D3980B00BDAA45 /* HackDavis2020_Pets.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
