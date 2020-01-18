@@ -8,9 +8,24 @@
 
 import SwiftUI
 
+struct Chat: Hashable {
+    var userName: String
+    var messageContent: String
+}
 struct ContentView: View {
+    var chatContent = [ Chat(userName: "Me", messageContent: "Hello there"),Chat(userName: "OtherPeople", messageContent: "Yo")]
     var body: some View {
-        Text("Hello, World!")
+        VStack{
+            List{
+                ForEach(chatContent,id: \.self){
+                    CC in
+                    Group{
+                        Text(CC.userName)
+                        Text(CC.messageContent)
+                    }
+                }
+            }
+        }
     }
 }
 

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,7 +14,24 @@
 		21ABB46623D3980F00BDAA45 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21ABB46523D3980F00BDAA45 /* Assets.xcassets */; };
 		21ABB46923D3980F00BDAA45 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21ABB46823D3980F00BDAA45 /* Preview Assets.xcassets */; };
 		21ABB46C23D3980F00BDAA45 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21ABB46A23D3980F00BDAA45 /* LaunchScreen.storyboard */; };
+		C5231BD823D3B6200033C22A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C5231BD723D3B6200033C22A /* GoogleService-Info.plist */; };
+		C5231BD923D3BE140033C22A /* Pods_HackDavis2020_Pets.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8A07F7F60E87754D46045C5 /* Pods_HackDavis2020_Pets.framework */; };
+		C5231BDA23D3BE140033C22A /* Pods_HackDavis2020_Pets.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A8A07F7F60E87754D46045C5 /* Pods_HackDavis2020_Pets.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C5231BDB23D3BE140033C22A /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				C5231BDA23D3BE140033C22A /* Pods_HackDavis2020_Pets.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		21ABB45923D3980B00BDAA45 /* HackDavis2020-Pets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HackDavis2020-Pets.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -26,6 +43,10 @@
 		21ABB46823D3980F00BDAA45 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		21ABB46B23D3980F00BDAA45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		21ABB46D23D3980F00BDAA45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8022E42FB86D3264E4A41F1E /* Pods-HackDavis2020-Pets.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackDavis2020-Pets.debug.xcconfig"; path = "Target Support Files/Pods-HackDavis2020-Pets/Pods-HackDavis2020-Pets.debug.xcconfig"; sourceTree = "<group>"; };
+		A8A07F7F60E87754D46045C5 /* Pods_HackDavis2020_Pets.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HackDavis2020_Pets.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF3FA741A9E32D3AB4535819 /* Pods-HackDavis2020-Pets.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackDavis2020-Pets.release.xcconfig"; path = "Target Support Files/Pods-HackDavis2020-Pets/Pods-HackDavis2020-Pets.release.xcconfig"; sourceTree = "<group>"; };
+		C5231BD723D3B6200033C22A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5231BD923D3BE140033C22A /* Pods_HackDavis2020_Pets.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +66,8 @@
 			children = (
 				21ABB45B23D3980B00BDAA45 /* HackDavis2020-Pets */,
 				21ABB45A23D3980B00BDAA45 /* Products */,
+				CB6E5ACBA41303ACE2169D48 /* Pods */,
+				E815A235DD0449360F8F02FA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,6 +82,7 @@
 		21ABB45B23D3980B00BDAA45 /* HackDavis2020-Pets */ = {
 			isa = PBXGroup;
 			children = (
+				C5231BD723D3B6200033C22A /* GoogleService-Info.plist */,
 				21ABB45C23D3980B00BDAA45 /* AppDelegate.swift */,
 				21ABB45E23D3980B00BDAA45 /* SceneDelegate.swift */,
 				21ABB46323D3980B00BDAA45 /* ContentView.swift */,
@@ -78,6 +103,23 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		CB6E5ACBA41303ACE2169D48 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8022E42FB86D3264E4A41F1E /* Pods-HackDavis2020-Pets.debug.xcconfig */,
+				AF3FA741A9E32D3AB4535819 /* Pods-HackDavis2020-Pets.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		E815A235DD0449360F8F02FA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A8A07F7F60E87754D46045C5 /* Pods_HackDavis2020_Pets.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -85,9 +127,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 21ABB47023D3980F00BDAA45 /* Build configuration list for PBXNativeTarget "HackDavis2020-Pets" */;
 			buildPhases = (
+				2BBE3BAA2000A9E17C96C0BE /* [CP] Check Pods Manifest.lock */,
 				21ABB45523D3980B00BDAA45 /* Sources */,
 				21ABB45623D3980B00BDAA45 /* Frameworks */,
 				21ABB45723D3980B00BDAA45 /* Resources */,
+				7D54BFC223243172BD9C4437 /* [CP] Embed Pods Frameworks */,
+				C5231BDB23D3BE140033C22A /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -137,12 +182,55 @@
 			buildActionMask = 2147483647;
 			files = (
 				21ABB46C23D3980F00BDAA45 /* LaunchScreen.storyboard in Resources */,
+				C5231BD823D3B6200033C22A /* GoogleService-Info.plist in Resources */,
 				21ABB46923D3980F00BDAA45 /* Preview Assets.xcassets in Resources */,
 				21ABB46623D3980F00BDAA45 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2BBE3BAA2000A9E17C96C0BE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HackDavis2020-Pets-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7D54BFC223243172BD9C4437 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HackDavis2020-Pets/Pods-HackDavis2020-Pets-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HackDavis2020-Pets/Pods-HackDavis2020-Pets-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HackDavis2020-Pets/Pods-HackDavis2020-Pets-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		21ABB45523D3980B00BDAA45 /* Sources */ = {
@@ -286,11 +374,12 @@
 		};
 		21ABB47123D3980F00BDAA45 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8022E42FB86D3264E4A41F1E /* Pods-HackDavis2020-Pets.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"HackDavis2020-Pets/Preview Content\"";
-				DEVELOPMENT_TEAM = BLHQ787DMR;
+				DEVELOPMENT_TEAM = Q65H9K9VZ6;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "HackDavis2020-Pets/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -306,11 +395,12 @@
 		};
 		21ABB47223D3980F00BDAA45 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AF3FA741A9E32D3AB4535819 /* Pods-HackDavis2020-Pets.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"HackDavis2020-Pets/Preview Content\"";
-				DEVELOPMENT_TEAM = BLHQ787DMR;
+				DEVELOPMENT_TEAM = Q65H9K9VZ6;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "HackDavis2020-Pets/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
