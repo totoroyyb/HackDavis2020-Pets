@@ -118,7 +118,9 @@ struct ContentView : View {
     }
     func sendMessage() {
         UIApplication.shared.endEditing()
+        if(composedMessage != "") {
         chatController.sendMessage(Chat(messageContent: composedMessage, userName: (Auth.auth().currentUser?.email)!, color: .green, isMe: true, receiveUsername: ""))
+        }
         composedMessage = ""
     }
 }
