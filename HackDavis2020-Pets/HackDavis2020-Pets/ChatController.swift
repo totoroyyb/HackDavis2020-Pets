@@ -24,11 +24,11 @@ class ChatController : ObservableObject {
             let sender = snapshot["Sender"] as! String
             if sender == Auth.auth().currentUser?.email
             {
-                let chatMessage = Chat(messageContent: messageText , userName: "Me", color: .green, isMe: true, receiveUsername: "")
+                let chatMessage = Chat(messageContent: messageText , userName: "", color: .green, isMe: true, receiveUsername: "")
                 self.messages.append(chatMessage)
             } else
             {
-                let chatMessage = Chat(messageContent: messageText , userName: sender, color: .blue, isMe: false, receiveUsername: "")
+                let chatMessage = Chat(messageContent: messageText , userName: "", color: .blue, isMe: false, receiveUsername: "")
                                self.messages.append(chatMessage)
             }
             
