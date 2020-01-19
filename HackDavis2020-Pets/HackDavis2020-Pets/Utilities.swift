@@ -19,7 +19,7 @@ struct GeometryGetter: View {
                     self.rect = geometry.frame(in: .global)
                 }
 
-                return AnyView(Color.clear)
+                return AnyView(EmptyView())
             }
         }
     }

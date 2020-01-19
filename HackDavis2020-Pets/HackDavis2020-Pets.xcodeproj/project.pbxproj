@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		062704589C10B7D45BF318FB /* Pods_HackDavis2020_Pets.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F5BE2F8A5E26761D2D149DA /* Pods_HackDavis2020_Pets.framework */; };
+		211B6C2F23D45DBC0016499D /* MapRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211B6C2E23D45DBC0016499D /* MapRepresentable.swift */; };
+		211B6C3123D462150016499D /* BlurRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211B6C3023D462150016499D /* BlurRepresentable.swift */; };
+		211B6C3323D469BC0016499D /* doggie-bg.json in Resources */ = {isa = PBXBuildFile; fileRef = 211B6C3223D469BC0016499D /* doggie-bg.json */; };
 		21ABB45D23D3980B00BDAA45 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21ABB45C23D3980B00BDAA45 /* AppDelegate.swift */; };
 		21ABB45F23D3980B00BDAA45 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21ABB45E23D3980B00BDAA45 /* SceneDelegate.swift */; };
 		21ABB46223D3980B00BDAA45 /* HackDavis2020_Pets.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 21ABB46023D3980B00BDAA45 /* HackDavis2020_Pets.xcdatamodeld */; };
@@ -28,9 +31,15 @@
 		21ABB48923D413EC00BDAA45 /* ChatController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21ABB48823D413EC00BDAA45 /* ChatController.swift */; };
 		21ABB48B23D4145D00BDAA45 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21ABB48A23D4145D00BDAA45 /* ChatView.swift */; };
 		21ABB48F23D416AF00BDAA45 /* Chats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21ABB48E23D416AF00BDAA45 /* Chats.swift */; };
+		21ABB49423D42CBA00BDAA45 /* dog-loading.json in Resources */ = {isa = PBXBuildFile; fileRef = 21ABB49323D42CBA00BDAA45 /* dog-loading.json */; };
+		21ABB49723D42D3F00BDAA45 /* LottieRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21ABB49623D42D3F00BDAA45 /* LottieRepresentable.swift */; };
+		21ABB49923D4465500BDAA45 /* ReportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21ABB49823D4465500BDAA45 /* ReportView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		211B6C2E23D45DBC0016499D /* MapRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapRepresentable.swift; sourceTree = "<group>"; };
+		211B6C3023D462150016499D /* BlurRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurRepresentable.swift; sourceTree = "<group>"; };
+		211B6C3223D469BC0016499D /* doggie-bg.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "doggie-bg.json"; sourceTree = "<group>"; };
 		21ABB45923D3980B00BDAA45 /* HackDavis2020-Pets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HackDavis2020-Pets.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		21ABB45C23D3980B00BDAA45 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		21ABB45E23D3980B00BDAA45 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -53,6 +62,9 @@
 		21ABB48823D413EC00BDAA45 /* ChatController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatController.swift; sourceTree = "<group>"; };
 		21ABB48A23D4145D00BDAA45 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 		21ABB48E23D416AF00BDAA45 /* Chats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chats.swift; sourceTree = "<group>"; };
+		21ABB49323D42CBA00BDAA45 /* dog-loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "dog-loading.json"; sourceTree = "<group>"; };
+		21ABB49623D42D3F00BDAA45 /* LottieRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieRepresentable.swift; sourceTree = "<group>"; };
+		21ABB49823D4465500BDAA45 /* ReportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportView.swift; sourceTree = "<group>"; };
 		4C03C45A6A216E2C79BAFBB3 /* Pods-HackDavis2020-Pets.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackDavis2020-Pets.debug.xcconfig"; path = "Target Support Files/Pods-HackDavis2020-Pets/Pods-HackDavis2020-Pets.debug.xcconfig"; sourceTree = "<group>"; };
 		8F5BE2F8A5E26761D2D149DA /* Pods_HackDavis2020_Pets.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HackDavis2020_Pets.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACF2590A77FF3D4202291C09 /* Pods-HackDavis2020-Pets.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackDavis2020-Pets.release.xcconfig"; path = "Target Support Files/Pods-HackDavis2020-Pets/Pods-HackDavis2020-Pets.release.xcconfig"; sourceTree = "<group>"; };
@@ -107,9 +119,11 @@
 				21ABB48223D3FB3600BDAA45 /* GlobalControl.swift */,
 				21ABB48623D4108500BDAA45 /* Modifiers.swift */,
 				21ABB46323D3980B00BDAA45 /* ContentView.swift */,
+				21ABB49523D42D1D00BDAA45 /* ViewRepresentable */,
 				21ABB47323D39B4A00BDAA45 /* Views */,
 				21ABB48D23D4169300BDAA45 /* Models */,
 				21ABB48C23D4146800BDAA45 /* Controllers */,
+				21ABB49223D42C9C00BDAA45 /* Files */,
 				21ABB46523D3980F00BDAA45 /* Assets.xcassets */,
 				21ABB46A23D3980F00BDAA45 /* LaunchScreen.storyboard */,
 				21ABB46D23D3980F00BDAA45 /* Info.plist */,
@@ -136,6 +150,7 @@
 				21ABB47C23D3C89F00BDAA45 /* MenuView.swift */,
 				21ABB48423D3FD3100BDAA45 /* ErrorView.swift */,
 				21ABB48A23D4145D00BDAA45 /* ChatView.swift */,
+				21ABB49823D4465500BDAA45 /* ReportView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -154,6 +169,25 @@
 				21ABB48E23D416AF00BDAA45 /* Chats.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		21ABB49223D42C9C00BDAA45 /* Files */ = {
+			isa = PBXGroup;
+			children = (
+				211B6C3223D469BC0016499D /* doggie-bg.json */,
+				21ABB49323D42CBA00BDAA45 /* dog-loading.json */,
+			);
+			path = Files;
+			sourceTree = "<group>";
+		};
+		21ABB49523D42D1D00BDAA45 /* ViewRepresentable */ = {
+			isa = PBXGroup;
+			children = (
+				21ABB49623D42D3F00BDAA45 /* LottieRepresentable.swift */,
+				211B6C2E23D45DBC0016499D /* MapRepresentable.swift */,
+				211B6C3023D462150016499D /* BlurRepresentable.swift */,
+			);
+			path = ViewRepresentable;
 			sourceTree = "<group>";
 		};
 		E4B5AEDADE6D0161D8355539 /* Pods */ = {
@@ -228,7 +262,9 @@
 				21ABB46C23D3980F00BDAA45 /* LaunchScreen.storyboard in Resources */,
 				21ABB48123D3F1AB00BDAA45 /* GoogleService-Info.plist in Resources */,
 				21ABB46923D3980F00BDAA45 /* Preview Assets.xcassets in Resources */,
+				211B6C3323D469BC0016499D /* doggie-bg.json in Resources */,
 				21ABB46623D3980F00BDAA45 /* Assets.xcassets in Resources */,
+				21ABB49423D42CBA00BDAA45 /* dog-loading.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +320,7 @@
 				21ABB47523D39B9A00BDAA45 /* LogInView.swift in Sources */,
 				21ABB45D23D3980B00BDAA45 /* AppDelegate.swift in Sources */,
 				21ABB47923D3C2A000BDAA45 /* Utilities.swift in Sources */,
+				21ABB49723D42D3F00BDAA45 /* LottieRepresentable.swift in Sources */,
 				21ABB45F23D3980B00BDAA45 /* SceneDelegate.swift in Sources */,
 				21ABB47D23D3C89F00BDAA45 /* MenuView.swift in Sources */,
 				21ABB48323D3FB3600BDAA45 /* GlobalControl.swift in Sources */,
@@ -294,6 +331,9 @@
 				21ABB47723D3B61700BDAA45 /* Extension.swift in Sources */,
 				21ABB48923D413EC00BDAA45 /* ChatController.swift in Sources */,
 				21ABB47B23D3C86500BDAA45 /* UnderMenu.swift in Sources */,
+				21ABB49923D4465500BDAA45 /* ReportView.swift in Sources */,
+				211B6C3123D462150016499D /* BlurRepresentable.swift in Sources */,
+				211B6C2F23D45DBC0016499D /* MapRepresentable.swift in Sources */,
 				21ABB46423D3980B00BDAA45 /* ContentView.swift in Sources */,
 				21ABB46223D3980B00BDAA45 /* HackDavis2020_Pets.xcdatamodeld in Sources */,
 				21ABB48723D4108500BDAA45 /* Modifiers.swift in Sources */,

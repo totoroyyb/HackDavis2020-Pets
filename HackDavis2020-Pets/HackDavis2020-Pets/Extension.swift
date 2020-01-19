@@ -10,6 +10,7 @@ import Foundation
 import SwiftUI
 import Combine
 import UIKit
+import MapKit
 
 extension Color {
     init(hex: String) {
@@ -25,6 +26,16 @@ extension Color {
         
         self.init(red: Double(r) / 0xff, green: Double(g) / 0xff, blue: Double(b) / 0xff)
         
+    }
+}
+
+extension MKPointAnnotation {
+    static var example: MKPointAnnotation {
+        let annotation = MKPointAnnotation()
+        annotation.title = "London"
+        annotation.subtitle = "Home to the 2012 Summer Olympics."
+        annotation.coordinate = CLLocationCoordinate2D(latitude: 51.5, longitude: -0.13)
+        return annotation
     }
 }
 

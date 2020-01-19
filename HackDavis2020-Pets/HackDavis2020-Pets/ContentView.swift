@@ -9,8 +9,6 @@
 import SwiftUI
 
 struct ContentView: View {
-    @EnvironmentObject var control: GlobalControl
-    
     var body: some View {
         UnderMenu(back: {
             AnyView(
@@ -19,7 +17,7 @@ struct ContentView: View {
                     .padding(.vertical, 50)
             )
         }) {
-            AnyView(CoverView())
+            AnyView(ReportView())
         }
     }
 }

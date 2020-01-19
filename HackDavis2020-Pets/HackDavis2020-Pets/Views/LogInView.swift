@@ -10,12 +10,27 @@ import SwiftUI
 import Firebase
 
 struct LogInView: View {
+    @State private var isLoggingIn = false
+    
     var body: some View {
         ZStack {
             LinearGradient(gradient: .init(colors: [Color(hex: "833ab4"), Color(hex: "fd1d1d"), Color(hex: "fcb045")]), startPoint: .topLeading, endPoint: .bottomTrailing)
                 .edgesIgnoringSafeArea(.all)
             
-            LogInInnerView().environmentObject(Control)
+            LogInInnerView(isLoggingIn: $isLoggingIn)
+            
+            Color.black
+                .opacity(self.isLoggingIn ? 0.8 : 0)
+                .animation(.linear)
+                .edgesIgnoringSafeArea(.all)
+            
+            if isLoggingIn {
+                VStack {
+                    LottieView(filename: "dog-loading").scaleEffect(1.5)
+                    Text("We are logging you in...")
+                }
+                .frame(width: 300, height: 250)
+            }
         }
     }
 }
@@ -24,6 +39,7 @@ private struct LogInInnerView: View {
     @Environment(\.presentationMode) var presentationMode
     @State private var userName = ""
     @State private var password = ""
+    @Binding var isLoggingIn: Bool
     
     var body: some View {
         ZStack {
@@ -41,6 +57,7 @@ private struct LogInInnerView: View {
                 
                 HStack {
                     Button(action: {
+                        self.isLoggingIn = true
                         Auth.auth().signIn(withEmail: self.userName, password: self.password) { (user, error) in
                            if error != nil {
                                 print(error!)
@@ -50,6 +67,7 @@ private struct LogInInnerView: View {
                                 print("\(String(describing: Auth.auth().currentUser?.email))")
                                 self.presentationMode.wrappedValue.dismiss()
                            }
+                            self.isLoggingIn = false
                        }
                     }) {
                         Text("Log In")
@@ -59,6 +77,7 @@ private struct LogInInnerView: View {
                     Spacer().frame(width: 20)
                     
                     Button(action: {
+                        
                         Auth.auth().createUser(withEmail: self.userName, password: self.password) { (user, error) in
                             if error != nil{
                                 print(error!)
@@ -75,8 +94,6 @@ private struct LogInInnerView: View {
                 .padding(.vertical)
             }
             .frame(maxWidth: UIScreen.main.bounds.width - 60)
-            
-            
         }
     }
 }
@@ -86,7 +103,7 @@ struct LogInView_Previews: PreviewProvider {
         Group {
             LogInView()
             
-            LogInInnerView()
+            LogInInnerView(isLoggingIn: .constant(true))
         }
         
     }
