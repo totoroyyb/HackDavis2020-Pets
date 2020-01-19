@@ -98,7 +98,7 @@ struct DogDetailView: View {
                 .padding(.bottom, 100)
                 .frame(maxWidth: .infinity)
             }
-            .background(Color.white)
+            .background(Color.clear)
         }.edgesIgnoringSafeArea(.all)
             .actionSheet(isPresented: self.$showAction, content: {self.actionSheet})
     }

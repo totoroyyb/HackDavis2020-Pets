@@ -14,7 +14,7 @@ struct UnderMenu<Content>: View where Content: View {
     
     var menuWidth: CGFloat = 250
     var translationThreshold: CGFloat = 80
-    var slideEdgeWidth: CGFloat = 40
+    var slideEdgeWidth: CGFloat = 30
     var openScale: CGFloat = 0.85
     var slideAnimation: Animation = .linear(duration: 0.2)
     

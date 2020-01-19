@@ -14,6 +14,10 @@
 		211B6C3723D471D60016499D /* gradient-animated.json in Resources */ = {isa = PBXBuildFile; fileRef = 211B6C3423D471D60016499D /* gradient-animated.json */; };
 		211B6C3823D471D60016499D /* blue-waves.json in Resources */ = {isa = PBXBuildFile; fileRef = 211B6C3523D471D60016499D /* blue-waves.json */; };
 		211B6C3923D471D60016499D /* notification.json in Resources */ = {isa = PBXBuildFile; fileRef = 211B6C3623D471D60016499D /* notification.json */; };
+		211B6C3E23D475120016499D /* DogCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211B6C3A23D475120016499D /* DogCardView.swift */; };
+		211B6C3F23D475120016499D /* DogInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211B6C3B23D475120016499D /* DogInfo.swift */; };
+		211B6C4023D475120016499D /* AdoptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211B6C3C23D475120016499D /* AdoptionView.swift */; };
+		211B6C4123D475120016499D /* DogDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211B6C3D23D475120016499D /* DogDetailView.swift */; };
 		21ABB45D23D3980B00BDAA45 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21ABB45C23D3980B00BDAA45 /* AppDelegate.swift */; };
 		21ABB45F23D3980B00BDAA45 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21ABB45E23D3980B00BDAA45 /* SceneDelegate.swift */; };
 		21ABB46223D3980B00BDAA45 /* HackDavis2020_Pets.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 21ABB46023D3980B00BDAA45 /* HackDavis2020_Pets.xcdatamodeld */; };
@@ -46,6 +50,10 @@
 		211B6C3423D471D60016499D /* gradient-animated.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "gradient-animated.json"; sourceTree = "<group>"; };
 		211B6C3523D471D60016499D /* blue-waves.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "blue-waves.json"; sourceTree = "<group>"; };
 		211B6C3623D471D60016499D /* notification.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = notification.json; sourceTree = "<group>"; };
+		211B6C3A23D475120016499D /* DogCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DogCardView.swift; path = "HackDavis2020-Pets/DogCardView.swift"; sourceTree = SOURCE_ROOT; };
+		211B6C3B23D475120016499D /* DogInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DogInfo.swift; path = "HackDavis2020-Pets/Models/DogInfo.swift"; sourceTree = SOURCE_ROOT; };
+		211B6C3C23D475120016499D /* AdoptionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AdoptionView.swift; path = "HackDavis2020-Pets/AdoptionView.swift"; sourceTree = SOURCE_ROOT; };
+		211B6C3D23D475120016499D /* DogDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DogDetailView.swift; path = "HackDavis2020-Pets/DogDetailView.swift"; sourceTree = SOURCE_ROOT; };
 		21ABB45923D3980B00BDAA45 /* HackDavis2020-Pets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HackDavis2020-Pets.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		21ABB45C23D3980B00BDAA45 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		21ABB45E23D3980B00BDAA45 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -151,6 +159,9 @@
 		21ABB47323D39B4A00BDAA45 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				211B6C3C23D475120016499D /* AdoptionView.swift */,
+				211B6C3A23D475120016499D /* DogCardView.swift */,
+				211B6C3D23D475120016499D /* DogDetailView.swift */,
 				21ABB47423D39B9A00BDAA45 /* LogInView.swift */,
 				21ABB47A23D3C86500BDAA45 /* UnderMenu.swift */,
 				21ABB47C23D3C89F00BDAA45 /* MenuView.swift */,
@@ -172,6 +183,7 @@
 		21ABB48D23D4169300BDAA45 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				211B6C3B23D475120016499D /* DogInfo.swift */,
 				21ABB48E23D416AF00BDAA45 /* Chats.swift */,
 			);
 			path = Models;
@@ -333,6 +345,7 @@
 				21ABB45D23D3980B00BDAA45 /* AppDelegate.swift in Sources */,
 				21ABB47923D3C2A000BDAA45 /* Utilities.swift in Sources */,
 				21ABB49723D42D3F00BDAA45 /* LottieRepresentable.swift in Sources */,
+				211B6C3F23D475120016499D /* DogInfo.swift in Sources */,
 				21ABB45F23D3980B00BDAA45 /* SceneDelegate.swift in Sources */,
 				21ABB47D23D3C89F00BDAA45 /* MenuView.swift in Sources */,
 				21ABB48323D3FB3600BDAA45 /* GlobalControl.swift in Sources */,
@@ -340,14 +353,17 @@
 				21ABB48B23D4145D00BDAA45 /* ChatView.swift in Sources */,
 				21ABB48523D3FD3100BDAA45 /* ErrorView.swift in Sources */,
 				21ABB48F23D416AF00BDAA45 /* Chats.swift in Sources */,
+				211B6C4023D475120016499D /* AdoptionView.swift in Sources */,
 				21ABB47723D3B61700BDAA45 /* Extension.swift in Sources */,
 				21ABB48923D413EC00BDAA45 /* ChatController.swift in Sources */,
 				21ABB47B23D3C86500BDAA45 /* UnderMenu.swift in Sources */,
 				21ABB49923D4465500BDAA45 /* ReportView.swift in Sources */,
 				211B6C3123D462150016499D /* BlurRepresentable.swift in Sources */,
+				211B6C3E23D475120016499D /* DogCardView.swift in Sources */,
 				211B6C2F23D45DBC0016499D /* MapRepresentable.swift in Sources */,
 				21ABB46423D3980B00BDAA45 /* ContentView.swift in Sources */,
 				21ABB46223D3980B00BDAA45 /* HackDavis2020_Pets.xcdatamodeld in Sources */,
+				211B6C4123D475120016499D /* DogDetailView.swift in Sources */,
 				21ABB48723D4108500BDAA45 /* Modifiers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

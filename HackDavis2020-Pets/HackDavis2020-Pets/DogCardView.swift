@@ -26,7 +26,7 @@ struct DogCardView: View {
                     Image("bandage.fill")
                         .scaleEffect(1.3)
                         .foregroundColor(.white)
-                    //                    .onHover(perform: <#T##(Bool) -> Void#>)
+                    //                    .onHover(perform: T##(Bool) -> Void)
                 }
                 .frame(width: 40, height: 40)
                 .offset(x: -ScreenDimension.width * 0.05, y:ScreenDimension.width * 0.05)

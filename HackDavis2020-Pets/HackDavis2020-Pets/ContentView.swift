@@ -10,14 +10,16 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        UnderMenu(back: {
-            AnyView(
-                MenuView()
-                    .padding()
-                    .padding(.vertical, 50)
-            )
-        }) {
-            AnyView(CoverView())
+        NavigationView {
+            UnderMenu(back: {
+                AnyView(
+                    MenuView()
+                        .padding()
+                        .padding(.vertical, 50)
+                )
+            }) {
+                AnyView(AdoptionView())
+            }
         }
     }
 }
