@@ -11,6 +11,9 @@
 		211B6C2F23D45DBC0016499D /* MapRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211B6C2E23D45DBC0016499D /* MapRepresentable.swift */; };
 		211B6C3123D462150016499D /* BlurRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211B6C3023D462150016499D /* BlurRepresentable.swift */; };
 		211B6C3323D469BC0016499D /* doggie-bg.json in Resources */ = {isa = PBXBuildFile; fileRef = 211B6C3223D469BC0016499D /* doggie-bg.json */; };
+		211B6C3723D471D60016499D /* gradient-animated.json in Resources */ = {isa = PBXBuildFile; fileRef = 211B6C3423D471D60016499D /* gradient-animated.json */; };
+		211B6C3823D471D60016499D /* blue-waves.json in Resources */ = {isa = PBXBuildFile; fileRef = 211B6C3523D471D60016499D /* blue-waves.json */; };
+		211B6C3923D471D60016499D /* notification.json in Resources */ = {isa = PBXBuildFile; fileRef = 211B6C3623D471D60016499D /* notification.json */; };
 		21ABB45D23D3980B00BDAA45 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21ABB45C23D3980B00BDAA45 /* AppDelegate.swift */; };
 		21ABB45F23D3980B00BDAA45 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21ABB45E23D3980B00BDAA45 /* SceneDelegate.swift */; };
 		21ABB46223D3980B00BDAA45 /* HackDavis2020_Pets.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 21ABB46023D3980B00BDAA45 /* HackDavis2020_Pets.xcdatamodeld */; };
@@ -40,6 +43,9 @@
 		211B6C2E23D45DBC0016499D /* MapRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapRepresentable.swift; sourceTree = "<group>"; };
 		211B6C3023D462150016499D /* BlurRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurRepresentable.swift; sourceTree = "<group>"; };
 		211B6C3223D469BC0016499D /* doggie-bg.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "doggie-bg.json"; sourceTree = "<group>"; };
+		211B6C3423D471D60016499D /* gradient-animated.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "gradient-animated.json"; sourceTree = "<group>"; };
+		211B6C3523D471D60016499D /* blue-waves.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "blue-waves.json"; sourceTree = "<group>"; };
+		211B6C3623D471D60016499D /* notification.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = notification.json; sourceTree = "<group>"; };
 		21ABB45923D3980B00BDAA45 /* HackDavis2020-Pets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HackDavis2020-Pets.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		21ABB45C23D3980B00BDAA45 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		21ABB45E23D3980B00BDAA45 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -174,6 +180,9 @@
 		21ABB49223D42C9C00BDAA45 /* Files */ = {
 			isa = PBXGroup;
 			children = (
+				211B6C3523D471D60016499D /* blue-waves.json */,
+				211B6C3423D471D60016499D /* gradient-animated.json */,
+				211B6C3623D471D60016499D /* notification.json */,
 				211B6C3223D469BC0016499D /* doggie-bg.json */,
 				21ABB49323D42CBA00BDAA45 /* dog-loading.json */,
 			);
@@ -261,10 +270,13 @@
 			files = (
 				21ABB46C23D3980F00BDAA45 /* LaunchScreen.storyboard in Resources */,
 				21ABB48123D3F1AB00BDAA45 /* GoogleService-Info.plist in Resources */,
+				211B6C3823D471D60016499D /* blue-waves.json in Resources */,
 				21ABB46923D3980F00BDAA45 /* Preview Assets.xcassets in Resources */,
 				211B6C3323D469BC0016499D /* doggie-bg.json in Resources */,
 				21ABB46623D3980F00BDAA45 /* Assets.xcassets in Resources */,
 				21ABB49423D42CBA00BDAA45 /* dog-loading.json in Resources */,
+				211B6C3723D471D60016499D /* gradient-animated.json in Resources */,
+				211B6C3923D471D60016499D /* notification.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

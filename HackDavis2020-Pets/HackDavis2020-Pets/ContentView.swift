@@ -17,7 +17,7 @@ struct ContentView: View {
                     .padding(.vertical, 50)
             )
         }) {
-            AnyView(ReportView())
+            AnyView(CoverView())
         }
     }
 }
