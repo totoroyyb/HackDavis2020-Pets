@@ -12,6 +12,9 @@ PODS:
   - Firebase/Database (6.13.0):
     - Firebase/CoreOnly
     - FirebaseDatabase (~> 6.1.2)
+  - Firebase/Storage (6.13.0):
+    - Firebase/CoreOnly
+    - FirebaseStorage (~> 3.4.2)
   - FirebaseAnalytics (6.1.6):
     - FirebaseCore (~> 6.4)
     - FirebaseInstanceID (~> 4.2)
@@ -48,6 +51,10 @@ PODS:
     - FirebaseCore (~> 6.0)
     - GoogleUtilities/Environment (~> 6.0)
     - GoogleUtilities/UserDefaults (~> 6.0)
+  - FirebaseStorage (3.4.3):
+    - FirebaseAuthInterop (~> 1.0)
+    - FirebaseCore (~> 6.0)
+    - GTMSessionFetcher/Core (~> 1.1)
   - GoogleAppMeasurement (6.1.6):
     - GoogleUtilities/AppDelegateSwizzler (~> 6.0)
     - GoogleUtilities/MethodSwizzler (~> 6.0)
@@ -89,6 +96,7 @@ DEPENDENCIES:
   - Firebase/Analytics
   - Firebase/Auth
   - Firebase/Database
+  - Firebase/Storage
   - lottie-ios
 
 SPEC REPOS:
@@ -102,6 +110,7 @@ SPEC REPOS:
     - FirebaseCoreDiagnosticsInterop
     - FirebaseDatabase
     - FirebaseInstanceID
+    - FirebaseStorage
     - GoogleAppMeasurement
     - GoogleDataTransport
     - GoogleDataTransportCCTSupport
@@ -121,6 +130,7 @@ SPEC CHECKSUMS:
   FirebaseCoreDiagnosticsInterop: e9b1b023157e3a2fc6418b5cb601e79b9af7b3a0
   FirebaseDatabase: 0144e0706a4761f1b0e8679572eba8095ddb59be
   FirebaseInstanceID: ebd2ea79ee38db0cb5f5167b17a0d387e1cc7b6e
+  FirebaseStorage: 93fe2f8190a01bfb2b2c4932df7d679744c4ef1d
   GoogleAppMeasurement: dfe55efa543e899d906309eaaac6ca26d249862f
   GoogleDataTransport: 8e9b210c97d55fbff306cc5468ff91b9cb32dcf5
   GoogleDataTransportCCTSupport: ef79a4728b864946a8aafdbab770d5294faf3b5f
@@ -130,6 +140,6 @@ SPEC CHECKSUMS:
   lottie-ios: 32bf84389337d86fbc8b12266e88452e0abf1dee
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
 
-PODFILE CHECKSUM: 4a9159e551d55264621526cf87eedd9048416a6c
+PODFILE CHECKSUM: 510b654cf58be354727bbd41738963ec44b25271
 
 COCOAPODS: 1.8.4

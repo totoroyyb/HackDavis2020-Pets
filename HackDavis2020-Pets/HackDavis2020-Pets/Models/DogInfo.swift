@@ -7,10 +7,10 @@
 //
 
 import Foundation
-
-struct DogInfo: Identifiable {
+import UIKit
+struct DogInfo: Identifiable,Hashable {
     let id = UUID()
-    var imageName = "placeholder"
+    var imageName : UIImage
     var name = "Unknown"
     var type = "Unknown"
     var age  = "Unknown"

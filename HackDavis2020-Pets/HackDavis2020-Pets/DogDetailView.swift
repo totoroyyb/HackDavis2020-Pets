@@ -113,8 +113,8 @@ struct DogDetailView: View {
     }
 }
 
-struct DogDetailView_Previews: PreviewProvider {
-    static var previews: some View {
-        DogDetailView(dogInfo: DogInfo(imageName: "Max", name: "Max", age: "1 year and 8 month", disabled: false))
-    }
-}
+//struct DogDetailView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        DogDetailView(dogInfo: DogInfo(imageName: "Max", name: "Max", age: "1 year and 8 month", disabled: false))
+//    }
+//}

@@ -7,17 +7,20 @@
 //
 
 import SwiftUI
-
+import FirebaseStorage
+import Firebase
+import FirebaseDatabase
+import Combine
 struct AdoptionView: View {
     @State var search = ""
     //    @State var showDetail = false
-    var dogs: [DogInfo] = [DogInfo(imageName: "Max", name: "Max", age: "1 year and 8 month", disabled: false), DogInfo(imageName: "Charlie", name: "Charlie", age: "3 years old", disabled: false), DogInfo(imageName: "Max", name: "Max", age: "1 year and 8 month", disabled: false), DogInfo(imageName: "Charlie", name: "Charlie", age: "3 years old", disabled: false), DogInfo(imageName: "Max", name: "Max", age: "1 year and 8 month", disabled: false), DogInfo(imageName: "Charlie", name: "Charlie", age: "3 years old", disabled: false), DogInfo(imageName: "Max", name: "Max", age: "1 year and 8 month", disabled: false), DogInfo(imageName: "Charlie", name: "Charlie", age: "3 years old", disabled: false), DogInfo(imageName: "Max", name: "Max", age: "1 year and 8 month", disabled: false), DogInfo(imageName: "Charlie", name: "Charlie", age: "3 years old", disabled: false)]
+    @ObservedObject var dogs: DogInfos
     
     var body: some View {
         ZStack() {
             ScrollView {
                 VStack {
-                    ForEach(self.dogs) { dog in
+                    ForEach(dogs.infos) { dog in
                         NavigationLink(destination: DogDetailView(dogInfo: dog)) {
                             DogCardView(dogInfo: dog)
                         }
@@ -77,8 +80,8 @@ struct AdoptionSearchBar: View {
     }
 }
 
-struct AdoptionView_Previews: PreviewProvider {
-    static var previews: some View {
-        AdoptionView()
-    }
-}
+//struct AdoptionView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        AdoptionView()
+//    }
+//}

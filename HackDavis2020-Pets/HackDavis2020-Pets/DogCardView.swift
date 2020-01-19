@@ -56,8 +56,4 @@ struct DogCardView: View {
     }
 }
 
-struct DogCardView_Previews: PreviewProvider {
-    static var previews: some View {
-        DogCardView(dogInfo: DogInfo(imageName: "Max", name: "Max", age: "1 year and 8 month", disabled: false))
-    }
-}
+

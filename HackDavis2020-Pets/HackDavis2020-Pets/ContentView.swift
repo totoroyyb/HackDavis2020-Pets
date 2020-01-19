@@ -24,7 +24,7 @@ struct ContentView: View {
                 }) {
                     AnyView(
                         ZStack {
-                            AdoptionView()
+                            AdoptionView(search: "", dogs: DogInfos())
                             VStack {
                                 Spacer()
                                 Button(action: {
