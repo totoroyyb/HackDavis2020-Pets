@@ -11,7 +11,7 @@ import SwiftUI
 struct AdoptionView: View {
     @State var search = ""
     //    @State var showDetail = false
-    var dogs: [DogInfo] = [DogInfo(imageName: "Max", name: "Max", age: "1 year and 8 month", disabled: false), DogInfo(imageName: "Charlie", name: "Charlie", age: "3 years old", disabled: false), DogInfo(imageName: "Max", name: "Max", age: "1 year and 8 month", disabled: false), DogInfo(imageName: "Charlie", name: "Charlie", age: "3 years old", disabled: false), DogInfo(imageName: "Max", name: "Max", age: "1 year and 8 month", disabled: false), DogInfo(imageName: "Charlie", name: "Charlie", age: "3 years old", disabled: false), DogInfo(imageName: "Max", name: "Max", age: "1 year and 8 month", disabled: false), DogInfo(imageName: "Charlie", name: "Charlie", age: "3 years old", disabled: false), DogInfo(imageName: "Max", name: "Max", age: "1 year and 8 month", disabled: false), DogInfo(imageName: "Charlie", name: "Charlie", age: "3 years old", disabled: false)]
+    var dogs: [DogInfo] = DogInfo.demoModel
     
     var body: some View {
         ZStack() {
