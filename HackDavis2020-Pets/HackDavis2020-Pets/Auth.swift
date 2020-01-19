@@ -10,11 +10,5 @@ import Foundation
 import Firebase
 
 func SignInUser(email: String, password: String) {
-    Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
-        if error != nil{
-            print(error!)
-        } else{
-            print("register success")
-        }
-    }
+    return Auth.auth().createUser(withEmail: email, password: password)
 }

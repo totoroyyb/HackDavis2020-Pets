@@ -9,6 +9,8 @@
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject var control: GlobalControl
+    
     var body: some View {
         UnderMenu(back: {
             AnyView(
