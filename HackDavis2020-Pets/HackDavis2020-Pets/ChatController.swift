@@ -16,7 +16,7 @@ class ChatController : ObservableObject {
     @Published var messages  = [Chat]()
     var didChange = PassthroughSubject<Void, Never>()
     func retrieveMessage()  {
-        let DB = Database.database().reference()
+        let DB = Database.database().reference().child("Messages")
         
         DB.observe(DataEventType .childAdded) { (DataSnapshot) in
             let snapshot = DataSnapshot.value as! NSDictionary
@@ -37,7 +37,7 @@ class ChatController : ObservableObject {
     
     
     func sendMessage(_ chatMessage: Chat) {
-        let DB = Database.database().reference()
+        let DB = Database.database().reference().child("Messages")
         let messagePacket = ["Sender" : Auth.auth().currentUser?.email,"Reciever": chatMessage.receiveUsername,"Message": chatMessage.messageContent]
         DB.childByAutoId().setValue(messagePacket){
             (error,reference) in
