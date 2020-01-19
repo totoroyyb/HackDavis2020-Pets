@@ -1,0 +1,6 @@
+framework module Pods_HackDavis2020_Pets {
+  umbrella header "Pods-HackDavis2020-Pets-umbrella.h"
+
+  export *
+  module * { export * }
+}
