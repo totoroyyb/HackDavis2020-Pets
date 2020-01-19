@@ -39,6 +39,7 @@ class ChatController : ObservableObject {
             }
             
         }
+        didChange.send()
     }
     
     func sendMessage(_ chatMessage: Chat) {
@@ -55,10 +56,9 @@ class ChatController : ObservableObject {
                 print(error!)
             } else {
                 print("Message saved successfully!")
-                self.retrieveMessage()
             }
         }
-        didChange.send(())
+        didChange.send()
     }
     
 }

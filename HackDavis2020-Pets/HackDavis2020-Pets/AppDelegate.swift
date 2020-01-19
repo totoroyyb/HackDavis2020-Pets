@@ -17,6 +17,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         FirebaseApp.configure()
         
+//        do{
+//        try Auth.auth().signOut()
+//            //do sth
+//        }
+//        catch {
+//        print("there was a problem when signing out")
+//        }
+        
         return true
     }
 

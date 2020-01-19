@@ -46,22 +46,28 @@ private struct ChatRow : View {
 struct ChatView : View {
     @State var composedMessage: String = ""
     @ObservedObject var chatController: ChatController
+    
     var body: some View {
         VStack {
-            List(){
+            List {
                 ForEach(chatController.messages, id: \.self) { msg in
                     ChatRow(chatMessage: msg)
                 }
-            }.listSeparatorStyleNone()
+            }
+            .frame(maxWidth: .infinity)
+            .padding(.top, 44)
+            .listSeparatorStyleNone()
             
             HStack {
                 TextField("Message...", text: $composedMessage).frame(minHeight: CGFloat(30))
                 Button(action: sendMessage) {
                     Text("Send")
                 }
-            }.frame(minHeight: CGFloat(50)).padding()
+            }
+            .frame(minHeight: CGFloat(50))
+            .padding()
         }
-        .onAppear(perform: {self.chatController.retrieveMessage()})
+        .onAppear(perform: self.chatController.retrieveMessage)
     }
     
     func sendMessage() {

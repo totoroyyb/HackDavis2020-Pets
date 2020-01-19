@@ -52,7 +52,6 @@ struct UnderMenu<Content>: View where Content: View {
                 HStack {
                     underContent
                     .frame(maxWidth: menuWidth, maxHeight: .infinity)
-                    
                     Spacer()
                 }
             }
