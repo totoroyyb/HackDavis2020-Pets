@@ -9,5 +9,6 @@ target 'HackDavis2020-Pets' do
   pod 'Firebase/Analytics'
   pod 'Firebase/Auth'
   pod 'Firebase/Database'
+  pod 'lottie-ios'
 
 end

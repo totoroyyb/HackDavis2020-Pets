@@ -24,6 +24,10 @@
 		21ABB48123D3F1AB00BDAA45 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 21ABB48023D3F1AB00BDAA45 /* GoogleService-Info.plist */; };
 		21ABB48323D3FB3600BDAA45 /* GlobalControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21ABB48223D3FB3600BDAA45 /* GlobalControl.swift */; };
 		21ABB48523D3FD3100BDAA45 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21ABB48423D3FD3100BDAA45 /* ErrorView.swift */; };
+		21ABB48723D4108500BDAA45 /* Modifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21ABB48623D4108500BDAA45 /* Modifiers.swift */; };
+		21ABB48923D413EC00BDAA45 /* ChatController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21ABB48823D413EC00BDAA45 /* ChatController.swift */; };
+		21ABB48B23D4145D00BDAA45 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21ABB48A23D4145D00BDAA45 /* ChatView.swift */; };
+		21ABB48F23D416AF00BDAA45 /* Chats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21ABB48E23D416AF00BDAA45 /* Chats.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +49,10 @@
 		21ABB48023D3F1AB00BDAA45 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		21ABB48223D3FB3600BDAA45 /* GlobalControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalControl.swift; sourceTree = "<group>"; };
 		21ABB48423D3FD3100BDAA45 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		21ABB48623D4108500BDAA45 /* Modifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modifiers.swift; sourceTree = "<group>"; };
+		21ABB48823D413EC00BDAA45 /* ChatController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatController.swift; sourceTree = "<group>"; };
+		21ABB48A23D4145D00BDAA45 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
+		21ABB48E23D416AF00BDAA45 /* Chats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chats.swift; sourceTree = "<group>"; };
 		4C03C45A6A216E2C79BAFBB3 /* Pods-HackDavis2020-Pets.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackDavis2020-Pets.debug.xcconfig"; path = "Target Support Files/Pods-HackDavis2020-Pets/Pods-HackDavis2020-Pets.debug.xcconfig"; sourceTree = "<group>"; };
 		8F5BE2F8A5E26761D2D149DA /* Pods_HackDavis2020_Pets.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HackDavis2020_Pets.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACF2590A77FF3D4202291C09 /* Pods-HackDavis2020-Pets.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackDavis2020-Pets.release.xcconfig"; path = "Target Support Files/Pods-HackDavis2020-Pets/Pods-HackDavis2020-Pets.release.xcconfig"; sourceTree = "<group>"; };
@@ -93,12 +101,15 @@
 			children = (
 				21ABB45C23D3980B00BDAA45 /* AppDelegate.swift */,
 				21ABB45E23D3980B00BDAA45 /* SceneDelegate.swift */,
-				21ABB46323D3980B00BDAA45 /* ContentView.swift */,
 				21ABB47623D3B61700BDAA45 /* Extension.swift */,
 				21ABB47823D3C2A000BDAA45 /* Utilities.swift */,
 				21ABB47E23D3EBBA00BDAA45 /* Auth.swift */,
 				21ABB48223D3FB3600BDAA45 /* GlobalControl.swift */,
+				21ABB48623D4108500BDAA45 /* Modifiers.swift */,
+				21ABB46323D3980B00BDAA45 /* ContentView.swift */,
 				21ABB47323D39B4A00BDAA45 /* Views */,
+				21ABB48D23D4169300BDAA45 /* Models */,
+				21ABB48C23D4146800BDAA45 /* Controllers */,
 				21ABB46523D3980F00BDAA45 /* Assets.xcassets */,
 				21ABB46A23D3980F00BDAA45 /* LaunchScreen.storyboard */,
 				21ABB46D23D3980F00BDAA45 /* Info.plist */,
@@ -124,8 +135,25 @@
 				21ABB47A23D3C86500BDAA45 /* UnderMenu.swift */,
 				21ABB47C23D3C89F00BDAA45 /* MenuView.swift */,
 				21ABB48423D3FD3100BDAA45 /* ErrorView.swift */,
+				21ABB48A23D4145D00BDAA45 /* ChatView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		21ABB48C23D4146800BDAA45 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				21ABB48823D413EC00BDAA45 /* ChatController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		21ABB48D23D4169300BDAA45 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				21ABB48E23D416AF00BDAA45 /* Chats.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		E4B5AEDADE6D0161D8355539 /* Pods */ = {
@@ -260,11 +288,15 @@
 				21ABB47D23D3C89F00BDAA45 /* MenuView.swift in Sources */,
 				21ABB48323D3FB3600BDAA45 /* GlobalControl.swift in Sources */,
 				21ABB47F23D3EBBA00BDAA45 /* Auth.swift in Sources */,
+				21ABB48B23D4145D00BDAA45 /* ChatView.swift in Sources */,
 				21ABB48523D3FD3100BDAA45 /* ErrorView.swift in Sources */,
+				21ABB48F23D416AF00BDAA45 /* Chats.swift in Sources */,
 				21ABB47723D3B61700BDAA45 /* Extension.swift in Sources */,
+				21ABB48923D413EC00BDAA45 /* ChatController.swift in Sources */,
 				21ABB47B23D3C86500BDAA45 /* UnderMenu.swift in Sources */,
 				21ABB46423D3980B00BDAA45 /* ContentView.swift in Sources */,
 				21ABB46223D3980B00BDAA45 /* HackDavis2020_Pets.xcdatamodeld in Sources */,
+				21ABB48723D4108500BDAA45 /* Modifiers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

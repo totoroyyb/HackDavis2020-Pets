@@ -28,6 +28,12 @@ extension Color {
     }
 }
 
+extension View {
+    public func listSeparatorStyleNone() -> some View {
+        modifier(ListSeparatorStyleNoneModifier())
+    }
+}
+
 final class KeyboardGuardian: ObservableObject {
     public var rects: Array<CGRect>
     public var keyboardRect: CGRect = CGRect()

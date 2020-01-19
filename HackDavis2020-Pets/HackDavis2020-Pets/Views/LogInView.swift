@@ -34,32 +34,27 @@ private struct LogInInnerView: View {
                     .padding()
                 
                 TextField("User Name", text: $userName)
-                    .padding()
-                    .overlay(RoundedRectangle(cornerRadius: 10, style: .continuous).stroke(Color.white.opacity(0.2), lineWidth: 2))
-                    .background(RoundedRectangle(cornerRadius: 10, style: .continuous).fill(Color.white.opacity(0.2)))
-                    .padding(.vertical)
+                    .modifier(LogInTextFieldModifier())
                 
                 SecureField("Password", text: $password)
-                    .padding()
-                    .overlay(RoundedRectangle(cornerRadius: 10, style: .continuous).stroke(Color.white.opacity(0.2), lineWidth: 2))
-                    .background(RoundedRectangle(cornerRadius: 10, style: .continuous).fill(Color.white.opacity(0.2)))
+                    .modifier(LogInTextFieldModifier())
                 
                 HStack {
                     Button(action: {
                         Auth.auth().signIn(withEmail: self.userName, password: self.password) { (user, error) in
                            if error != nil {
                                 print(error!)
+                                print("\(String(describing: Auth.auth().currentUser?.email))")
                            } else {
                                 print("Log in successful")
+                                print("\(String(describing: Auth.auth().currentUser?.email))")
                                 self.presentationMode.wrappedValue.dismiss()
                            }
                        }
                     }) {
                         Text("Log In")
                     }
-                    .frame(maxWidth: .infinity)
-                    .padding()
-                    .overlay(RoundedRectangle(cornerRadius: 10, style: .continuous).stroke(Color.white.opacity(0.8), lineWidth: 2))
+                    .modifier(LogInModifier())
                     
                     Spacer().frame(width: 20)
                     
@@ -74,14 +69,13 @@ private struct LogInInnerView: View {
                     }) {
                         Text("Sign Up")
                     }
-                    .frame(maxWidth: .infinity)
-                    .padding()
-                    .overlay(RoundedRectangle(cornerRadius: 10, style: .continuous).stroke(Color.white.opacity(0.8), lineWidth: 2))
+                    .modifier(LogInModifier())
                 }
                 .frame(maxWidth: .infinity)
                 .padding(.vertical)
             }
             .frame(maxWidth: UIScreen.main.bounds.width - 60)
+            
             
         }
     }
