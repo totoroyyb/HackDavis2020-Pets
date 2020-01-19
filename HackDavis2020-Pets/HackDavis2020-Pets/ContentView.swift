@@ -44,24 +44,24 @@ struct ContentView: View {
                 }
             }
             
-                ChatView(chatController: ChatController())
-                .animation(.spring(response: 0.5, dampingFraction: 0.7, blendDuration: 0))
-                .environmentObject(control)
-                    .offset(y: self.control.isChatRoomClicked ? 0 : UIScreen.main.bounds.height)
-            
-                ReportView()
-                .background(Color.black)
-                .offset(y: self.control.isReportedClicked ? 0 : UIScreen.main.bounds.height)
-                .animation(.spring(response: 0.5, dampingFraction: 0.7, blendDuration: 0))
-                .environmentObject(control)
-                .edgesIgnoringSafeArea(.all)
-            
-                CreatePost(isShow: $isShowCreate)
-                .background(Color.black)
-                .offset(y: self.isShowCreate ? 0 : UIScreen.main.bounds.height)
-                .animation(.spring(response: 0.5, dampingFraction: 0.7, blendDuration: 0))
-                .transition(.move(edge: .bottom))
-                .edgesIgnoringSafeArea(.all)
+            ChatView(chatController: ChatController())
+            .animation(.spring(response: 0.5, dampingFraction: 0.7, blendDuration: 0))
+            .environmentObject(control)
+                .offset(y: self.control.isChatRoomClicked ? 0 : UIScreen.main.bounds.height)
+        
+            ReportView()
+            .background(Color.black)
+            .offset(y: self.control.isReportedClicked ? 0 : UIScreen.main.bounds.height)
+            .animation(.spring(response: 0.5, dampingFraction: 0.7, blendDuration: 0))
+            .environmentObject(control)
+            .edgesIgnoringSafeArea(.all)
+        
+            CreatePost(isShow: $isShowCreate)
+            .background(Color.black)
+            .offset(y: self.isShowCreate ? 0 : UIScreen.main.bounds.height)
+            .animation(.spring(response: 0.5, dampingFraction: 0.7, blendDuration: 0))
+            .transition(.move(edge: .bottom))
+            .edgesIgnoringSafeArea(.all)
         }
     }
 }

@@ -62,11 +62,11 @@ private struct MenuItems: View {
                 Text("Homeless Pets")
             }
             
-            Button(action: {
-                
-            }) {
-                Text("Some Menu Item")
-            }
+//            Button(action: {
+//                
+//            }) {
+//                Text("Some Menu Item")
+//            }
         }
         .padding()
     }
