@@ -49,6 +49,13 @@ struct UnderMenu<Content>: View where Content: View {
                 Color.white
                     .edgesIgnoringSafeArea(.all)
                 
+                VStack {
+                    Spacer()
+                    LottieView(filename: "blue-waves")
+                        .frame(height: 400)
+                }
+                .edgesIgnoringSafeArea(.all)
+                
                 HStack {
                     underContent
                     .frame(maxWidth: menuWidth, maxHeight: .infinity)
