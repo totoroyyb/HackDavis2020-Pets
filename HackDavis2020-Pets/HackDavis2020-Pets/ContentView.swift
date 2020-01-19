@@ -10,7 +10,15 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        LogInView()
+        UnderMenu(back: {
+            AnyView(
+                MenuView()
+                    .padding()
+                    .padding(.vertical, 50)
+            )
+        }) {
+            AnyView(CoverView())
+        }
     }
 }
 
