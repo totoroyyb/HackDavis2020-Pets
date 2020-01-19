@@ -89,7 +89,7 @@ struct DogDetailView: View {
                         .cornerRadius(50)
                     
                 }
-                .padding(.top, ScreenDimension.height * 0.12)
+                .padding(.top, ScreenDimension.height * 0.09)
                 .padding(.bottom, 100)
                 .frame(maxWidth: .infinity)
             }
@@ -99,15 +99,14 @@ struct DogDetailView: View {
                 VStack {
                     Text(dogInfo.name).font(Font.system(size: 25, weight: .bold, design: .default)).offset(y: ScreenDimension.height * 0.03)
                 }
-                .frame(width: ScreenDimension.width, height: ScreenDimension.height * 0.12)
+                .frame(width: ScreenDimension.width, height: ScreenDimension.height * 0.08)
                 .padding(.bottom)
                 .background(Color("login.gradient.blue"))
                 //            .zIndex(1)
                             .navigationBarHidden(true)
                 Spacer()
             }
-            
-            
+
         }.edgesIgnoringSafeArea(.all)
             .actionSheet(isPresented: self.$showAction, content: {self.actionSheet})
     }

@@ -36,6 +36,7 @@ struct ChatRow : View {
     var body: some View {
         Group {
             if !chatMessage.isMe {
+
                 HStack {
                     Group {
                         Text(chatMessage.userName)
@@ -71,7 +72,7 @@ struct ChatRow : View {
 struct ChatView : View {
     @ObservedObject private var keyboardObserver = KeyboardObserver()
     @State var composedMessage: String = ""
-    @ObservedObject var chatController: ChatController
+    @ObservedObject var chatController : ChatController
     @EnvironmentObject var control: GlobalControl
     
     var body: some View {

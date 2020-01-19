@@ -28,7 +28,7 @@ struct AdoptionView: View {
                 }.padding(.top, ScreenDimension.height * 0.2)
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .background(Color.black)
+            .background(Color("background-pets"))
             AdoptionSearchBar(search: self.$search)
         }
         .accentColor(.black)

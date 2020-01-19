@@ -105,7 +105,7 @@ struct ReportView: View {
                     Spacer()
                 }
                 .padding()
-            }
+            }.background(Color("background.report"))
             
             
             VStack {

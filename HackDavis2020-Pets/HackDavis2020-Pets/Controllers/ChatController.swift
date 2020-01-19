@@ -12,17 +12,19 @@ import SwiftUI
 import FirebaseDatabase
 import Firebase
 
+
+
 class ChatController : ObservableObject {
     @Published var messages = [Chat]()
     var didChange = PassthroughSubject<Void, Never>()
     func retrieveMessage()  {
         let DB = Database.database().reference().child("Messages")
-        
-        DB.observe(DataEventType .childAdded) { (DataSnapshot) in
+                    
+        DB.observe(DataEventType.childAdded) { (DataSnapshot) in
             let snapshot = DataSnapshot.value as! NSDictionary
             let messageText = snapshot["Message"] as! String
             let sender = snapshot["Sender"] as! String
-            
+
             if sender == Auth.auth().currentUser?.email
             {
                 let chatMessage = Chat(messageContent: messageText , userName: "", color: .green, isMe: true, receiveUsername: "")
@@ -32,7 +34,6 @@ class ChatController : ObservableObject {
                 let chatMessage = Chat(messageContent: messageText , userName: "", color: .blue, isMe: false, receiveUsername: "")
                                self.messages.append(chatMessage)
             }
-            
         }
         didChange.send(())
     }

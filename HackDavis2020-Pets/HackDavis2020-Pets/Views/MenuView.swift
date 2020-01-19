@@ -54,21 +54,26 @@ private struct MenuItems: View {
                 self.control.isChatRoomClicked.toggle()
             }) {
                 Text("Chat")
+                    .foregroundColor(.black)
+                    .font(Font.system(size: 20, weight: .bold, design: .default))
             }
             
             Button(action: {
                 self.control.isReportedClicked.toggle()
             }) {
                 Text("Homeless Pets")
+                    .foregroundColor(.black)
+                    .font(Font.system(size: 20, weight: .bold, design: .default))
             }
             
-//            Button(action: {
-//                
-//            }) {
-//                Text("Some Menu Item")
-//            }
+            //            Button(action: {
+            //
+            //            }) {
+            //                Text("Some Menu Item")
+            //            }
         }
         .padding()
+        
     }
 }
 
@@ -83,6 +88,7 @@ struct PanelBottom: View {
                 HStack {
                     Image.init(systemName: "person.badge.plus")
                     Text("Log In")
+                        .font(Font.system(size: 20, weight: .bold, design: .default))
                 }
             }
             
@@ -92,8 +98,10 @@ struct PanelBottom: View {
                 HStack {
                     Image.init(systemName: "gear")
                     Text("Settings")
+                        .foregroundColor(.black)
+                        .font(Font.system(size: 20, weight: .bold, design: .default))
                 }
             }
-        }
+        }.foregroundColor(.black)
     }
 }

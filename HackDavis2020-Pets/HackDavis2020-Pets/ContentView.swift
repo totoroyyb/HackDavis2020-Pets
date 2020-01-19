@@ -32,7 +32,9 @@ struct ContentView: View {
                                 }) {
                                     Image(systemName: "plus.circle")
                                         .resizable()
+                                        .foregroundColor(.white)
                                         .frame(width: 50, height: 50)
+                                    .shadow(radius: 40)
                                 }
                                 .background(BlurView(style: .dark))
                                 .clipShape(Circle())
@@ -68,6 +70,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView().environmentObject(Control)
     }
 }
