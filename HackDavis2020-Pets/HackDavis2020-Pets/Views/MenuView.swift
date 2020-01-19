@@ -57,9 +57,9 @@ private struct MenuItems: View {
             }
             
             Button(action: {
-                
+                self.control.isReportedClicked.toggle()
             }) {
-                Text("Some Menu Item")
+                Text("Homeless Pets")
             }
             
             Button(action: {

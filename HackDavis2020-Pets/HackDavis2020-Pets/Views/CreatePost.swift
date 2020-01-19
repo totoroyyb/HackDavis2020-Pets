@@ -12,6 +12,8 @@ struct CreatePost: View {
     @State var composedTitle: String = ""
     @State var composedStory: String = ""
     @ObservedObject private var keyboardObserver = KeyboardObserver()
+    @Binding var isShow: Bool
+    
     var body: some View {
         VStack{
             TextField("Title", text: $composedTitle).frame(minHeight: CGFloat(50)).padding().font(.largeTitle)
@@ -19,22 +21,26 @@ struct CreatePost: View {
                 text: $composedStory
             )
             
-            
             HStack {
                 Button(action: {}) {
                     Text("Add Image")
                 }.frame(minHeight: CGFloat(30)).padding().font(.headline)
                 Spacer()
-                Button(action: {}) {
+                Button(action: {
+                    self.isShow.toggle()
+                }) {
                     Text("Public Post")
                 }.frame(minHeight: CGFloat(30)).padding().font(.headline)
             }
-            
-            
-        }.padding(.bottom, keyboardObserver.keyboardHeight)
-            .animation(.easeInOut(duration: 0.3)).onTapGesture {
-                UIApplication.shared.endEditing()}
+        }
+        .padding(.top, 42)
+        .padding(.bottom, 20)
+        .padding(.bottom, keyboardObserver.keyboardHeight)
+        .onTapGesture {
+                UIApplication.shared.endEditing()
+        }
     }
+    
     struct TextView: UIViewRepresentable {
         @Binding var text: String
         func makeCoordinator() -> Coordinator {
@@ -78,7 +84,7 @@ struct CreatePost: View {
     }
     struct CreatePost_Previews: PreviewProvider {
         static var previews: some View {
-            CreatePost()
+            CreatePost(isShow: .constant(true))
         }
     }
 }

@@ -112,7 +112,7 @@ struct ChatView : View {
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .onAppear(perform: {self.chatController.retrieveMessage()}).padding(.bottom, keyboardObserver.keyboardHeight)
-            .animation(.easeInOut(duration: 0.3)).onTapGesture {
+            .onTapGesture {
                 UIApplication.shared.endEditing()
         }
     }

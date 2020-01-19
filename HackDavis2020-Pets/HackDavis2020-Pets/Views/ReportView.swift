@@ -16,6 +16,7 @@ struct ReportView: View {
     @State private var centerCoordinate = CLLocationCoordinate2D()
     @State private var locations = [MKPointAnnotation]()
     @State private var additionNotes = ""
+    @EnvironmentObject var control: GlobalControl
     
     var body: some View {
         ZStack {
@@ -110,7 +111,7 @@ struct ReportView: View {
             VStack {
                 Spacer()
                 Button(action: {
-                    
+                    self.control.isReportedClicked.toggle()
                 }) {
                     Text("Submit")
                 }
@@ -121,6 +122,8 @@ struct ReportView: View {
             }
             .padding()
         }
+        .padding(.top, 42)
+        .padding(.bottom, 20)
     }
 }
 
