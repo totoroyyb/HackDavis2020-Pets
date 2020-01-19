@@ -18,6 +18,7 @@
 		211B6C3F23D475120016499D /* DogInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211B6C3B23D475120016499D /* DogInfo.swift */; };
 		211B6C4023D475120016499D /* AdoptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211B6C3C23D475120016499D /* AdoptionView.swift */; };
 		211B6C4123D475120016499D /* DogDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211B6C3D23D475120016499D /* DogDetailView.swift */; };
+		2142509023D48352008C14C9 /* CreatePost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2142508F23D48352008C14C9 /* CreatePost.swift */; };
 		21ABB45D23D3980B00BDAA45 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21ABB45C23D3980B00BDAA45 /* AppDelegate.swift */; };
 		21ABB45F23D3980B00BDAA45 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21ABB45E23D3980B00BDAA45 /* SceneDelegate.swift */; };
 		21ABB46223D3980B00BDAA45 /* HackDavis2020_Pets.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 21ABB46023D3980B00BDAA45 /* HackDavis2020_Pets.xcdatamodeld */; };
@@ -54,6 +55,7 @@
 		211B6C3B23D475120016499D /* DogInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DogInfo.swift; path = "HackDavis2020-Pets/Models/DogInfo.swift"; sourceTree = SOURCE_ROOT; };
 		211B6C3C23D475120016499D /* AdoptionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AdoptionView.swift; path = "HackDavis2020-Pets/AdoptionView.swift"; sourceTree = SOURCE_ROOT; };
 		211B6C3D23D475120016499D /* DogDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DogDetailView.swift; path = "HackDavis2020-Pets/DogDetailView.swift"; sourceTree = SOURCE_ROOT; };
+		2142508F23D48352008C14C9 /* CreatePost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatePost.swift; sourceTree = "<group>"; };
 		21ABB45923D3980B00BDAA45 /* HackDavis2020-Pets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HackDavis2020-Pets.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		21ABB45C23D3980B00BDAA45 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		21ABB45E23D3980B00BDAA45 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 		21ABB47323D39B4A00BDAA45 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				2142508F23D48352008C14C9 /* CreatePost.swift */,
 				211B6C3C23D475120016499D /* AdoptionView.swift */,
 				211B6C3A23D475120016499D /* DogCardView.swift */,
 				211B6C3D23D475120016499D /* DogDetailView.swift */,
@@ -359,6 +362,7 @@
 				21ABB47B23D3C86500BDAA45 /* UnderMenu.swift in Sources */,
 				21ABB49923D4465500BDAA45 /* ReportView.swift in Sources */,
 				211B6C3123D462150016499D /* BlurRepresentable.swift in Sources */,
+				2142509023D48352008C14C9 /* CreatePost.swift in Sources */,
 				211B6C3E23D475120016499D /* DogCardView.swift in Sources */,
 				211B6C2F23D45DBC0016499D /* MapRepresentable.swift in Sources */,
 				21ABB46423D3980B00BDAA45 /* ContentView.swift in Sources */,

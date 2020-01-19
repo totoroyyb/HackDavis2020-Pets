@@ -128,13 +128,13 @@ struct CoverView: View {
     }
 }
 
-struct UnderMenu_Previews: PreviewProvider {
-    static var previews: some View {
-        UnderMenu(back: {
-            AnyView(UnderView())
-        }) {
-            AnyView(CoverView())
-        }
-    }
-}
+//struct UnderMenu_Previews: PreviewProvider {
+//    static var previews: some View {
+//        UnderMenu(back: {
+//            AnyView(UnderView())
+//        }) {
+//            AnyView(CoverView())
+//        }
+//    }
+//}
 

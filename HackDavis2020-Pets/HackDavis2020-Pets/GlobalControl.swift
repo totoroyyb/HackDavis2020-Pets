@@ -14,4 +14,5 @@ var Control = GlobalControl()
 class GlobalControl: ObservableObject {
     @Published var isShowError = false
     @Published var isShowLoading = false
+    @Published var isChatRoomClicked = false
 }

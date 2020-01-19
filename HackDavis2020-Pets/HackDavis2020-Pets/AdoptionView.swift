@@ -15,7 +15,7 @@ struct AdoptionView: View {
     
     var body: some View {
         ZStack() {
-            ScrollView() {
+            ScrollView {
                 VStack {
                     ForEach(self.dogs) { dog in
                         NavigationLink(destination: DogDetailView(dogInfo: dog)) {

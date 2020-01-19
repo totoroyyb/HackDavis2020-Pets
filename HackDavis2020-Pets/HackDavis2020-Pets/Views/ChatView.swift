@@ -8,8 +8,30 @@
 
 import SwiftUI
 import Firebase
+import Combine
 
-private struct ChatRow : View {
+class KeyboardObserver: ObservableObject {
+    
+    private var cancellable: AnyCancellable?
+    
+    @Published private(set) var keyboardHeight: CGFloat = 0
+    
+    let keyboardWillShow = NotificationCenter.default
+        .publisher(for: UIResponder.keyboardWillShowNotification)
+        .compactMap { ($0.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect)?.height }
+    
+    let keyboardWillHide = NotificationCenter.default
+        .publisher(for: UIResponder.keyboardWillHideNotification)
+        .map { _ -> CGFloat in 0 }
+    
+    init() {
+        cancellable = Publishers.Merge(keyboardWillShow, keyboardWillHide)
+            .subscribe(on: RunLoop.main)
+            .assign(to: \.keyboardHeight, on: self)
+    }
+}
+
+struct ChatRow : View {
     var chatMessage: Chat
     var body: some View {
         Group {
@@ -27,16 +49,19 @@ private struct ChatRow : View {
                 }
             } else {
                 HStack {
-                    Group {
                         Spacer()
-                        Text(chatMessage.messageContent)
-                            .bold()
-                            .foregroundColor(Color.white)
-                            .padding(10)
-                            .background(chatMessage.color)
-                            .cornerRadius(10)
-                        Text(chatMessage.userName)
-                    }
+                        VStack{Text(chatMessage.userName)
+                            Text(chatMessage.messageContent)
+                                .bold()
+                                .foregroundColor(Color.white)
+                                .padding(10)
+                                .background(chatMessage.color)
+                                .cornerRadius(10)
+                            
+                        }
+                        
+                        
+                    
                 }
             }
         }
@@ -44,34 +69,59 @@ private struct ChatRow : View {
 }
 
 struct ChatView : View {
+    @ObservedObject private var keyboardObserver = KeyboardObserver()
     @State var composedMessage: String = ""
     @ObservedObject var chatController: ChatController
+    @EnvironmentObject var control: GlobalControl
     
     var body: some View {
-        VStack {
-            List {
-                ForEach(chatController.messages, id: \.self) { msg in
-                    ChatRow(chatMessage: msg)
+        ZStack {
+            VStack {
+                List {
+                    ForEach(chatController.messages, id: \.self) { msg in
+                        ChatRow(chatMessage: msg)
+                    }
                 }
+                .listSeparatorStyleNone()
+                
+                HStack {
+                    TextField("Message...", text: $composedMessage).frame(minHeight: CGFloat(40))
+                    Button(action: sendMessage) {
+                        Text("Send")
+                    }
+                }
+                .frame(minHeight: CGFloat(50))
+                .padding()
+                .background(Color.black)
             }
-            .frame(maxWidth: .infinity)
-            .padding(.top, 44)
-            .listSeparatorStyleNone()
             
-            HStack {
-                TextField("Message...", text: $composedMessage).frame(minHeight: CGFloat(30))
-                Button(action: sendMessage) {
-                    Text("Send")
+            VStack {
+                HStack {
+                    Spacer()
+                    Button(action: {
+                        self.control.isChatRoomClicked.toggle()
+                    }) {
+                        Image(systemName: "xmark.circle")
+                            .resizable()
+                            .frame(width: 35, height: 35)
+                    }
+                    .padding()
                 }
+                Spacer()
             }
-            .frame(minHeight: CGFloat(50))
-            .padding()
         }
-        .onAppear(perform: self.chatController.retrieveMessage)
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .onAppear(perform: {self.chatController.retrieveMessage()}).padding(.bottom, keyboardObserver.keyboardHeight)
+            .animation(.easeInOut(duration: 0.3)).onTapGesture {
+                UIApplication.shared.endEditing()
+        }
     }
     
     func sendMessage() {
-        chatController.sendMessage(Chat(messageContent: composedMessage, userName: (Auth.auth().currentUser?.email)!, color: .green, isMe: true, receiveUsername: ""))
+        UIApplication.shared.endEditing()
+        if(composedMessage != "") {
+            chatController.sendMessage(Chat(messageContent: composedMessage, userName: (Auth.auth().currentUser?.email)!, color: .green, isMe: true, receiveUsername: ""))
+        }
         composedMessage = ""
     }
 }

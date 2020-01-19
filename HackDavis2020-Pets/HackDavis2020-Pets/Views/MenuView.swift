@@ -27,6 +27,7 @@ struct MenuView: View {
             
             MenuItems()
                 .padding()
+                .environmentObject(Control)
             
             Spacer()
             
@@ -45,12 +46,14 @@ struct MenuView_Previews: PreviewProvider {
 }
 
 private struct MenuItems: View {
+    @EnvironmentObject var control: GlobalControl
+    
     var body: some View {
         VStack(spacing: 40) {
             Button(action: {
-                
+                self.control.isChatRoomClicked.toggle()
             }) {
-                Text("Some Menu Item")
+                Text("Chat")
             }
             
             Button(action: {

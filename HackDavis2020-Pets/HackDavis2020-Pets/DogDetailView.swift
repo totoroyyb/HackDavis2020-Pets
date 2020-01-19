@@ -18,20 +18,15 @@ struct DogDetailView: View {
             title: Text("Are you sure to submit your adoption request to us?"),
             buttons: [.default( Text("Submit")){
                 //
-            },
-            .cancel()
-            ])
+                },
+                      .cancel()
+        ])
     }
     
     
     var body: some View {
-        VStack(spacing: 0) {
-            VStack {
-                Text(dogInfo.name).font(Font.system(size: 25, weight: .bold, design: .default)).offset(y: ScreenDimension.height * 0.03)
-            }
-            .frame(width: ScreenDimension.width, height: ScreenDimension.height * 0.12)
-            .padding(.bottom)
-            .background(Color("login.gradient.blue"))
+        ZStack {
+            
             ScrollView {
                 VStack(spacing: 10) {
                     Image(dogInfo.imageName)
@@ -94,11 +89,25 @@ struct DogDetailView: View {
                         .cornerRadius(50)
                     
                 }
-                .padding(.top, 0)
+                .padding(.top, ScreenDimension.height * 0.12)
                 .padding(.bottom, 100)
                 .frame(maxWidth: .infinity)
             }
             .background(Color.clear)
+            
+            VStack {
+                VStack {
+                    Text(dogInfo.name).font(Font.system(size: 25, weight: .bold, design: .default)).offset(y: ScreenDimension.height * 0.03)
+                }
+                .frame(width: ScreenDimension.width, height: ScreenDimension.height * 0.12)
+                .padding(.bottom)
+                .background(Color("login.gradient.blue"))
+                //            .zIndex(1)
+                            .navigationBarHidden(true)
+                Spacer()
+            }
+            
+            
         }.edgesIgnoringSafeArea(.all)
             .actionSheet(isPresented: self.$showAction, content: {self.actionSheet})
     }
