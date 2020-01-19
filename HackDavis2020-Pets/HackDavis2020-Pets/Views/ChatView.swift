@@ -36,7 +36,6 @@ struct ChatRow : View {
     var body: some View {
         Group {
             if !chatMessage.isMe {
-
                 HStack {
                     Group {
                         Text(chatMessage.userName)
@@ -45,6 +44,7 @@ struct ChatRow : View {
                             .padding(10)
                             .foregroundColor(Color.white)
                             .background(chatMessage.color)
+                            .opacity(0.7)
                             .cornerRadius(10)
                     }
                 }
@@ -57,12 +57,10 @@ struct ChatRow : View {
                                 .foregroundColor(Color.white)
                                 .padding(10)
                                 .background(chatMessage.color)
+                                .opacity(0.7)
                                 .cornerRadius(10)
                             
                         }
-                        
-                        
-                    
                 }
             }
         }
@@ -112,10 +110,15 @@ struct ChatView : View {
             }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .onAppear(perform: {self.chatController.retrieveMessage()}).padding(.bottom, keyboardObserver.keyboardHeight)
+        .padding(.top, 50)
+        .padding(.bottom, 15)
+        .background(Color.black)
+        .padding(.bottom, 55)
+       .padding(.bottom, keyboardObserver.keyboardHeight - 55)
             .onTapGesture {
                 UIApplication.shared.endEditing()
         }
+        .edgesIgnoringSafeArea(.all)
     }
     
     func sendMessage() {

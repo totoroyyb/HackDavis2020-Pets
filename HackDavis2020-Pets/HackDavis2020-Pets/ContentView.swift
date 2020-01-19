@@ -11,13 +11,15 @@ import SwiftUI
 struct ContentView: View {
     @EnvironmentObject var control: GlobalControl
     @State var isShowCreate = false
+    @State var isSettingsOpened = false
+    @ObservedObject var chatController = ChatController()
     
     var body: some View {
         ZStack {
             NavigationView {
                 UnderMenu(back: {
                     AnyView(
-                        MenuView()
+                        MenuView(isSettingClicked: self.$isSettingsOpened)
                             .padding()
                             .padding(.vertical, 50)
                     )
@@ -45,8 +47,12 @@ struct ContentView: View {
                     )
                 }
             }
+            .sheet(isPresented: self.$isSettingsOpened) {
+                SettingsView()
+            }
             
-            ChatView(chatController: ChatController())
+            ChatView(chatController: self.chatController)
+                .onAppear(perform: {self.chatController.retrieveMessage()})
             .animation(.spring(response: 0.5, dampingFraction: 0.7, blendDuration: 0))
             .environmentObject(control)
                 .offset(y: self.control.isChatRoomClicked ? 0 : UIScreen.main.bounds.height)

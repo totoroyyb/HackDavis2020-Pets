@@ -7,9 +7,11 @@
 //
 
 import SwiftUI
+import Firebase
 
 struct MenuView: View {
     @State var isLogInClicked = false
+    @Binding var isSettingClicked: Bool
     
     var body: some View {
         VStack {
@@ -23,7 +25,28 @@ struct MenuView: View {
                 .padding()
             
             Text("Username")
+                .foregroundColor(.black)
                 .padding()
+            
+            HStack {
+                Button(action: {
+                    
+                }) {
+                    LottieView(filename: "like")
+                    .frame(width: 50, height: 50)
+                }
+                
+                Divider()
+                
+                Button(action: {
+                    
+                }) {
+                    LottieView(filename: "notification")
+                    .frame(width: 50, height: 50)
+                    .scaleEffect(4.5)
+                }
+            }
+            .frame(height: 50)
             
             MenuItems()
                 .padding()
@@ -31,7 +54,7 @@ struct MenuView: View {
             
             Spacer()
             
-            PanelBottom(isLogIn: $isLogInClicked)
+            PanelBottom(isLogIn: $isLogInClicked, isSettingsClicked: $isSettingClicked)
         }
         .sheet(isPresented: $isLogInClicked) {
             LogInView()
@@ -41,7 +64,7 @@ struct MenuView: View {
 
 struct MenuView_Previews: PreviewProvider {
     static var previews: some View {
-        MenuView()
+        MenuView(isSettingClicked: .constant(true))
     }
 }
 
@@ -79,29 +102,46 @@ private struct MenuItems: View {
 
 struct PanelBottom: View {
     @Binding var isLogIn: Bool
+    @Binding var isSettingsClicked: Bool
     
     var body: some View {
         VStack(alignment: .leading) {
             Button(action: {
-                self.isLogIn.toggle()
-            }) {
-                HStack {
-                    Image.init(systemName: "person.badge.plus")
-                    Text("Log In")
-                        .font(Font.system(size: 20, weight: .bold, design: .default))
-                }
-            }
-            
-            Button(action: {
-                
+                self.isSettingsClicked.toggle()
             }) {
                 HStack {
                     Image.init(systemName: "gear")
                     Text("Settings")
                         .foregroundColor(.black)
-                        .font(Font.system(size: 20, weight: .bold, design: .default))
+                        .font(Font.system(size: 18, weight: .bold, design: .default))
                 }
             }
+            
+            HStack {
+                Button(action: {
+                    self.isLogIn.toggle()
+                }) {
+                    HStack {
+                        Image.init(systemName: "person.badge.plus")
+                        Text("Log In")
+                            .font(Font.system(size: 18, weight: .bold, design: .default))
+                    }
+                }
+                
+                Divider()
+                    .frame(width: 20, height: 30)
+                
+                Button(action: {
+                    try? Auth.auth().signOut()
+                }) {
+                    HStack {
+                        Image.init(systemName: "escape")
+                        Text("Log Out")
+                            .font(Font.system(size: 18, weight: .bold, design: .default))
+                    }
+                }
+            }
+            
         }.foregroundColor(.black)
     }
 }
