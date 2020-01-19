@@ -23,9 +23,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 print("Log in successful")
             }
         }
+
         
         // Override point for customization after application launch.
         return true
+    }
+    func applicationWillTerminate(_ application: UIApplication) {
+        do{
+        try Auth.auth().signOut()
+            print("sign out")
+        }
+        catch {
+        print("there was a problem when signing out")
+        }
     }
 
     // MARK: UISceneSession Lifecycle

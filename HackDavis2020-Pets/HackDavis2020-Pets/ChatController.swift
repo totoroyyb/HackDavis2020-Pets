@@ -33,11 +33,14 @@ class ChatController : ObservableObject {
             }
             
         }
+        didChange.send(())
     }
     
     
     func sendMessage(_ chatMessage: Chat) {
         let DB = Database.database().reference().child("Messages")
+//        let DB1 = Database.database().reference().child("Dogs")
+//        DB1.childByAutoId().setValue(["NickName" : "Bailey","Age": "7","Type": "Chihuahua", "isDisable": "false", "Story": "She was lost in the woods when I found her", "ImageUrl":"www.google.com"])
         let messagePacket = ["Sender" : Auth.auth().currentUser?.email,"Reciever": chatMessage.receiveUsername,"Message": chatMessage.messageContent]
         DB.childByAutoId().setValue(messagePacket){
             (error,reference) in
