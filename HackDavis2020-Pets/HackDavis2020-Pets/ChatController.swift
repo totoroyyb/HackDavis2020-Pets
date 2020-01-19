@@ -13,17 +13,31 @@ import FirebaseDatabase
 import Firebase
 
 class ChatController : ObservableObject {
+    @Published var messages  = [Chat]()
     var didChange = PassthroughSubject<Void, Never>()
-
-    @Published var messages = [
-        Chat(messageContent: "Hello world", userName: "A", color: .red, receiveUsername: ""),
-        Chat(messageContent: "Hi", userName: "B", color: .blue, receiveUsername: "")
-    ]
+    func retrieveMessage()  {
+        let DB = Database.database().reference()
+        
+        DB.observe(DataEventType .childAdded) { (DataSnapshot) in
+            let snapshot = DataSnapshot.value as! NSDictionary
+            let messageText = snapshot["Message"] as! String
+            let sender = snapshot["Sender"] as! String
+            if sender == Auth.auth().currentUser?.email
+            {
+                let chatMessage = Chat(messageContent: messageText , userName: "Me", color: .green, isMe: true, receiveUsername: "")
+                self.messages.append(chatMessage)
+            } else
+            {
+                let chatMessage = Chat(messageContent: messageText , userName: sender, color: .blue, isMe: false, receiveUsername: "")
+                               self.messages.append(chatMessage)
+            }
+            
+        }
+    }
+    
     
     func sendMessage(_ chatMessage: Chat) {
-        messages.append(chatMessage)
-        var DB: DatabaseReference!
-        DB = Database.database().reference().child("Messages")
+        let DB = Database.database().reference()
         let messagePacket = ["Sender" : Auth.auth().currentUser?.email,"Reciever": chatMessage.receiveUsername,"Message": chatMessage.messageContent]
         DB.childByAutoId().setValue(messagePacket){
             (error,reference) in

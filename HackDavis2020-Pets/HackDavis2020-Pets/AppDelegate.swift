@@ -16,6 +16,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure()
+        Auth.auth().signIn(withEmail: "1@2.com", password: "123456") { (user, error) in
+            if error != nil{
+                print(error!)
+            } else {
+                print("Log in successful")
+            }
+        }
+        
         // Override point for customization after application launch.
         return true
     }

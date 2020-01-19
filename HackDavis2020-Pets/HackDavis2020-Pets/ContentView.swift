@@ -83,10 +83,10 @@ struct ContentView : View {
                     Text("Send")
                 }
             }.frame(minHeight: CGFloat(50)).padding()
-        }
+        }.onAppear(perform: {self.chatController.retrieveMessage()})
     }
     func sendMessage() {
-        chatController.sendMessage(Chat(messageContent: composedMessage, userName: "C", color: .green, isMe: true, receiveUsername: ""))
+        chatController.sendMessage(Chat(messageContent: composedMessage, userName: (Auth.auth().currentUser?.email)!, color: .green, isMe: true, receiveUsername: ""))
         composedMessage = ""
     }
 }
