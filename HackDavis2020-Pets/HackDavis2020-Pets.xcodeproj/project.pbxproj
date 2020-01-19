@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -20,6 +20,8 @@
 		21ABB47923D3C2A000BDAA45 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21ABB47823D3C2A000BDAA45 /* Utilities.swift */; };
 		21ABB47B23D3C86500BDAA45 /* UnderMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21ABB47A23D3C86500BDAA45 /* UnderMenu.swift */; };
 		21ABB47D23D3C89F00BDAA45 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21ABB47C23D3C89F00BDAA45 /* MenuView.swift */; };
+		21ABB47F23D3EBBA00BDAA45 /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21ABB47E23D3EBBA00BDAA45 /* Auth.swift */; };
+		21ABB48123D3F1AB00BDAA45 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 21ABB48023D3F1AB00BDAA45 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,8 @@
 		21ABB47823D3C2A000BDAA45 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		21ABB47A23D3C86500BDAA45 /* UnderMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderMenu.swift; sourceTree = "<group>"; };
 		21ABB47C23D3C89F00BDAA45 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		21ABB47E23D3EBBA00BDAA45 /* Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
+		21ABB48023D3F1AB00BDAA45 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4C03C45A6A216E2C79BAFBB3 /* Pods-HackDavis2020-Pets.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackDavis2020-Pets.debug.xcconfig"; path = "Target Support Files/Pods-HackDavis2020-Pets/Pods-HackDavis2020-Pets.debug.xcconfig"; sourceTree = "<group>"; };
 		8F5BE2F8A5E26761D2D149DA /* Pods_HackDavis2020_Pets.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HackDavis2020_Pets.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACF2590A77FF3D4202291C09 /* Pods-HackDavis2020-Pets.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackDavis2020-Pets.release.xcconfig"; path = "Target Support Files/Pods-HackDavis2020-Pets/Pods-HackDavis2020-Pets.release.xcconfig"; sourceTree = "<group>"; };
@@ -88,11 +92,13 @@
 				21ABB46323D3980B00BDAA45 /* ContentView.swift */,
 				21ABB47623D3B61700BDAA45 /* Extension.swift */,
 				21ABB47823D3C2A000BDAA45 /* Utilities.swift */,
+				21ABB47E23D3EBBA00BDAA45 /* Auth.swift */,
 				21ABB47323D39B4A00BDAA45 /* Views */,
 				21ABB46523D3980F00BDAA45 /* Assets.xcassets */,
 				21ABB46A23D3980F00BDAA45 /* LaunchScreen.storyboard */,
 				21ABB46D23D3980F00BDAA45 /* Info.plist */,
 				21ABB46023D3980B00BDAA45 /* HackDavis2020_Pets.xcdatamodeld */,
+				21ABB48023D3F1AB00BDAA45 /* GoogleService-Info.plist */,
 				21ABB46723D3980F00BDAA45 /* Preview Content */,
 			);
 			path = "HackDavis2020-Pets";
@@ -122,7 +128,6 @@
 				4C03C45A6A216E2C79BAFBB3 /* Pods-HackDavis2020-Pets.debug.xcconfig */,
 				ACF2590A77FF3D4202291C09 /* Pods-HackDavis2020-Pets.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -187,6 +192,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				21ABB46C23D3980F00BDAA45 /* LaunchScreen.storyboard in Resources */,
+				21ABB48123D3F1AB00BDAA45 /* GoogleService-Info.plist in Resources */,
 				21ABB46923D3980F00BDAA45 /* Preview Assets.xcassets in Resources */,
 				21ABB46623D3980F00BDAA45 /* Assets.xcassets in Resources */,
 			);
@@ -246,6 +252,7 @@
 				21ABB47923D3C2A000BDAA45 /* Utilities.swift in Sources */,
 				21ABB45F23D3980B00BDAA45 /* SceneDelegate.swift in Sources */,
 				21ABB47D23D3C89F00BDAA45 /* MenuView.swift in Sources */,
+				21ABB47F23D3EBBA00BDAA45 /* Auth.swift in Sources */,
 				21ABB47723D3B61700BDAA45 /* Extension.swift in Sources */,
 				21ABB47B23D3C86500BDAA45 /* UnderMenu.swift in Sources */,
 				21ABB46423D3980B00BDAA45 /* ContentView.swift in Sources */,

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>270933977966-g084dnb95aa3ogf09m8p1i16vfqfi0di.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.270933977966-g084dnb95aa3ogf09m8p1i16vfqfi0di</string>
+	<key>API_KEY</key>
+	<string>AIzaSyA5VBiWsJmqZa8bhOFhukwtrzZkkEGfxEs</string>
+	<key>GCM_SENDER_ID</key>
+	<string>270933977966</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>iDEX.TotoroQ.HackDavis2020-Pets</string>
+	<key>PROJECT_ID</key>
+	<string>pets-bdc09</string>
+	<key>STORAGE_BUCKET</key>
+	<string>pets-bdc09.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:270933977966:ios:94bd4411e871814caf6f7f</string>
+	<key>DATABASE_URL</key>
+	<string>https://pets-bdc09.firebaseio.com</string>
+</dict>
+</plist>

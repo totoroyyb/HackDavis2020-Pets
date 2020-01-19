@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import Firebase
 
 struct LogInView: View {
     var body: some View {
@@ -54,7 +55,7 @@ private struct LogInInnerView: View {
                 Spacer().frame(width: 20)
                 
                 Button(action: {
-                    
+                    SignInUser(email: self.userName, password: self.password)
                 }) {
                     Text("Sign Up")
                 }
