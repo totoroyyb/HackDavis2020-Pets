@@ -7,7 +7,7 @@
 //
 
 import SwiftUI
-
+import Firebase
 public struct ListSeparatorStyleNoneModifier: ViewModifier {
     public func body(content: Content) -> some View {
         content.onAppear {
@@ -27,6 +27,7 @@ struct Chat : Hashable {
     var userName: String
     var color: Color
     var isMe: Bool = false
+    var receiveUsername: String
 }
 
 struct ChatRow : View {
@@ -85,7 +86,7 @@ struct ContentView : View {
         }
     }
     func sendMessage() {
-        chatController.sendMessage(Chat(messageContent: composedMessage, userName: "C", color: .green, isMe: true))
+        chatController.sendMessage(Chat(messageContent: composedMessage, userName: "C", color: .green, isMe: true, receiveUsername: ""))
         composedMessage = ""
     }
 }
