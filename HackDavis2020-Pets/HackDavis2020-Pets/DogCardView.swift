@@ -51,19 +51,19 @@ struct DogCardView: View {
                     VStack {
                         ZStack {
                             Circle()
-                                .overlay(Circle().stroke(lineWidth: 3).foregroundColor(.white))
+                                .overlay(Circle().stroke(lineWidth: 3).foregroundColor(.white).scaleEffect(1.1))
                                 .opacity(0.7)
                                 .foregroundColor(Color.black)
                             Image("bandage.fill")
                                 .scaleEffect(1.3)
                                 .foregroundColor(.white)
                         }
-                        .padding()
+//                        .padding([.top, .trailing])
                         .frame(width: 40, height: 40)
                         .shadow(radius: 40)
                         Spacer()
                     }
-                }
+                }.padding()
                 
             }
         }
